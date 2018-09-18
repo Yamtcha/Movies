@@ -8,8 +8,15 @@
         </div>
     </div>
     <div class="Episode">
-        <p>
+        <p class = "episode">
           Episodes
         </p>
+    </div>
+    <div class ="List">
+            <ul>
+                <li *ngFor="let user of users$">
+                    <a routerLink="">{{ user.result.title}}</a>
+                </li>
+            </ul>
     </div>
 </div>

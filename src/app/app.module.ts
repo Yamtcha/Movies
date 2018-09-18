@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { SearchMovieComponent } from './search-movie/search-movie.component';
 import { MovieListComponent } from './movie-list/movie-list.component';
 import { MovieComponent } from './movie/movie.component';
+import { HttpClientModule } from '@angular/common/http';
 
 
 const routes: Routes = [
@@ -35,6 +36,7 @@ const routes: Routes = [
     MovieComponent
   ],
   imports: [
+    HttpClientModule,
     BrowserModule,
     AppRoutingModule,
     RouterModule.forRoot([
