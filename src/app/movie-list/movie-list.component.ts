@@ -7,15 +7,16 @@ import { Observable } from 'rxjs';
   templateUrl: './movie-list.component.html',
   styleUrls: ['./movie-list.component.scss']
 })
+
 export class MovieListComponent implements OnInit {
 
-  users$: Object;
+  Movies$: Object;
 
-  constructor(private data: DataService) { }
+  constructor(private data: DataService) {}
 
   ngOnInit() {
-    this.data.getMovieList().subscribe(
-      data => this.users$ = data
+    this.data.JSON().subscribe(
+        data => { this.Movies$ = data['results']; }
     );
   }
 }

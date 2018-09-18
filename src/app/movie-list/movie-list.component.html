@@ -13,9 +13,9 @@
         </p>
     </div>
     <div class ="List">
-            <ul>
-                <li *ngFor="let user of users$">
-                    <a routerLink="">{{ user.result.title}}</a>
+            <ul class = "MovieTitle">
+                <li  *ngFor="let movie of Movies$">
+                   <p> Episode {{movie['episode_id']}} : <a style="text-decoration:none" routerLink="">{{movie['title']}}</a></p>
                 </li>
             </ul>
     </div>

@@ -5,11 +5,13 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 
+
+
 export class DataService {
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {}
 
-  getMovieList() {
+  public JSON() {
     return this.http.get('https://swapi.co/api/films/');
   }
 
