@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DataService } from '../data.service';
 
 @Component({
   selector: 'app-movie',
@@ -7,9 +8,30 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MovieComponent implements OnInit {
 
-  constructor() { }
+  CharacterName$: String[];
+  Movies$: Object;
+  constructor(private data: DataService, ) { }
+
 
   ngOnInit() {
-  }
 
+  }
+  getSelectedMovie(MovieName: any) {
+
+    if (!MovieName) {
+      this.data.Movies().subscribe(
+        data => {
+          this.Movies$ = data['results'];
+
+          if (this.Movies$['title'] === MovieName) {
+            for (let i = 0; i < this.Movies$['characters'].length(); i++) {
+              this.data.CharactersName(data['characters'][i]).subscribe(character => {
+                this.CharacterName$ = character['name'];
+              });
+            }
+          }
+        });
+    }
+
+  }
 }

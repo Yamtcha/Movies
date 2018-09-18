@@ -11,8 +11,11 @@ export class DataService {
 
   constructor(private http: HttpClient) {}
 
-  public JSON() {
+  public Movies() {
     return this.http.get('https://swapi.co/api/films/');
   }
 
+  public CharactersName(url: any) {
+    return this.http.get(url);
+  }
 }

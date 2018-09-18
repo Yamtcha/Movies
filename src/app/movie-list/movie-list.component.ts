@@ -15,7 +15,7 @@ export class MovieListComponent implements OnInit {
   constructor(private data: DataService) {}
 
   ngOnInit() {
-    this.data.JSON().subscribe(
+    this.data.Movies().subscribe(
         data => { this.Movies$ = data['results']; }
     );
   }

@@ -15,7 +15,7 @@
     <div class ="List">
             <ul class = "MovieTitle">
                 <li  *ngFor="let movie of Movies$">
-                   <p> Episode {{movie['episode_id']}} : <a style="text-decoration:none" routerLink="">{{movie['title']}}</a></p>
+                   <p> Episode {{movie['episode_id']}} : <a style="text-decoration:none" routerLink="/movie/{{movie['title']}}">{{movie['title']}}</a></p>
                 </li>
             </ul>
     </div>
