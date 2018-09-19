@@ -15,8 +15,17 @@
     <div class ="List">
             <ul class = "MovieTitle">
                 <li  *ngFor="let movie of Movies$">
-                   <p> Episode {{movie['episode_id']}} : <a style="text-decoration:none" routerLink="/movie/{{movie['title']}}">{{movie['title']}}</a></p>
+                   <p> Episode {{movie['episode_id']}} : <a class='poptilte' style="text-decoration:none" href="#popup1">{{movie['title']}}</a></p>
                 </li>
             </ul>
+    </div>
+    <div id="popup1" class="overlay">
+            <div class="popup">
+                <h2>Movie</h2>
+                <a class="close" href="#">&times;</a>
+                <div class="content">
+                    Thank to pop me out of that button, but now i'm done so you can close this window.
+                </div>
+            </div>
     </div>
 </div>

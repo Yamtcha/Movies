@@ -5,7 +5,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SearchMovieComponent } from './search-movie/search-movie.component';
 import { MovieListComponent } from './movie-list/movie-list.component';
-import { MovieComponent } from './movie/movie.component';
 import { HttpClientModule } from '@angular/common/http';
 
 
@@ -22,18 +21,12 @@ const routes: Routes = [
     path: 'movieList',
     component: MovieListComponent
   },
-  ,
-  {
-    path: 'Movie',
-    component: MovieComponent
-  }
 ];
 @NgModule({
   declarations: [
     AppComponent,
     SearchMovieComponent,
     MovieListComponent,
-    MovieComponent
   ],
   imports: [
     HttpClientModule,
@@ -43,7 +36,6 @@ const routes: Routes = [
       { path: '', component: AppComponent},
       { path: 'SearchMovie', component: SearchMovieComponent},
       { path: 'movieList', component: MovieListComponent},
-      { path: 'Movie', component: MovieComponent},
     ])
   ],
   providers: [],
