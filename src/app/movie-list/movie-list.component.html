@@ -21,7 +21,7 @@
         <ul class="MovieTitle">
             <li *ngFor="let movie of Movies$">
                 <p> Episode {{movie['episode_id']}} :
-                    <a class='poptilte' style="text-decoration:none" href="#{{movie['title']}}" >{{movie['title']}}</a>
+                    <a class='poptilte' style="text-decoration:none" href="#{{movie['title']}}">{{movie['title']}}</a>
                 </p>
                 <span id="{{movie['title']}}" class="overlay">
                     <div id="popup">
@@ -29,10 +29,15 @@
                         <a class="close" href="#">&times;</a>
                         <span class="content">
                             <ul class="MovieTitle">
-                                <li> <span id ='contentlabel'>Title :</span>   {{movie['title']}} </li>
-                                <li> <span id ='contentlabel'>Release Date : </span>  {{movie['release_date']}} </li>
-                                <li> <span id ='contentlabel'>Opening Crawl :</span>  {{movie['opening_crawl']}} </li>
-                                <li> <span id ='contentlabel'>Characters :</span> </li>
+                                <li>
+                                    <span id='contentlabel'>Title :</span> {{movie['title']}} </li>
+                                <li>
+                                    <span id='contentlabel'>Release Date : </span> {{movie['release_date']}} </li>
+                                <li>
+                                    <span id='contentlabel'>Opening Crawl :</span> {{movie['opening_crawl']}} </li>
+                                <li>
+                                    <span id='contentlabel'>Characters :</span>
+                                </li>
                             </ul>
                         </span>
                     </div>
@@ -41,4 +46,5 @@
         </ul>
     </div>
 </body>
+
 </html>

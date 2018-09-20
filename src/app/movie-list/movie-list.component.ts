@@ -11,18 +11,12 @@ import { Observable } from 'rxjs';
 export class MovieListComponent implements OnInit {
 
   Movies$: Object;
-  Title$: String;
-  ReleaseDate$: String;
-  OpeningCrawl$ = 'ntwana';
 
   constructor(private data: DataService) {}
 
   ngOnInit() {
     this.data.Movies().subscribe(
         data => { this.Movies$ = data['results'];
-                this.Title$ = this.Movies$['title'];
-                // this.ReleaseDate$ = this.Movies$['release_date'];
-                this.OpeningCrawl$ = this.Movies$['opening_crawl'];
       }
     );
   }
