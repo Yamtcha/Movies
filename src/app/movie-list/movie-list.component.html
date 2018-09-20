@@ -35,8 +35,12 @@
                                     <span id='contentlabel'>Release Date : </span> {{movie['release_date']}} </li>
                                 <li>
                                     <span id='contentlabel'>Opening Crawl :</span> {{movie['opening_crawl']}} </li>
-                                <li>
-                                    <span id='contentlabel'>Characters :</span>
+                               
+                               <li>
+                                    <span id='contentlabel'> Characters : </span>
+                                    <span *ngFor ="let character of Characters$">
+                                            {{character}} ,
+                                    </span>
                                 </li>
                             </ul>
                         </span>
