@@ -5,6 +5,11 @@
     left:100px;
 }
 
+#contentlabel {
+    font-weight:bold;
+    font-size:15px;
+}
+
 .card-text {
     max-width: 60%;
 }
@@ -43,7 +48,7 @@
     opacity: 1;
   }
   
-  .popup {
+  #popup {
     margin: 70px auto;
     padding: 20px;
     background: #fff;
@@ -53,12 +58,12 @@
     transition: all 5s ease-in-out;
   }
   
-  .popup h2 {
+  #popup h2 {
     margin-top: 0;
     color: #333;
     font-family: Tahoma, Arial, sans-serif;
   }
-  .popup .close {
+  #popup .close {
     position: absolute;
     top: 20px;
     right: 30px;
@@ -68,10 +73,10 @@
     text-decoration: none;
     color: #333;
   }
-  .popup .close:hover {
+  #popup .close:hover {
     color: #06D85F;
   }
-  .popup .content {
+  #popup .content {
     max-height: 30%;
     overflow: auto;
   }

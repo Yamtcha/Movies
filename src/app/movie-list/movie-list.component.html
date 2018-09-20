@@ -1,31 +1,44 @@
-<div>
+<html>
+
+<body>
+
     <div class="card" style="width:400px">
         <img class="cardOne" src="/assets/images/episode2.png" alt="Card image" style="width:60%">
         <div class="card-body">
-          <h4 class="card-title">Star Wars</h4>
-          <p class="card-text">Star Wars is an epic space opera franchise, created by George Lucas and centered around a film series that began with the eponymous 1977 movie. The saga quickly became a worldwide pop culture phenomenon.</p>
-          <a href="https://www.netflix.com/watch/60001814?trackId=13752289&tctx=0%2C3%2C429f211f08f22f121cf059cb56d17967ecd22037%3A6fbab3d6ea168f53ec48ca73fa3ed5d56dde3fee%2C%2C" class="btn btn-primary" target="_blank" > See Movie</a>
+            <h4 class="card-title">Star Wars</h4>
+            <p class="card-text">Star Wars is an epic space opera franchise, created by George Lucas and centered around a film series that began
+                with the eponymous 1977 movie. The saga quickly became a worldwide pop culture phenomenon.</p>
+            <a href="https://www.netflix.com/watch/60001814?trackId=13752289&tctx=0%2C3%2C429f211f08f22f121cf059cb56d17967ecd22037%3A6fbab3d6ea168f53ec48ca73fa3ed5d56dde3fee%2C%2C"
+                class="btn btn-primary" target="_blank"> See Movie</a>
         </div>
     </div>
     <div class="Episode">
-        <p class = "episode">
-          Episodes
+        <p class="episode">
+            Episodes
         </p>
     </div>
-    <div class ="List">
-            <ul class = "MovieTitle">
-                <li  *ngFor="let movie of Movies$">
-                   <p> Episode {{movie['episode_id']}} : <a class='poptilte' style="text-decoration:none" href="#popup1">{{movie['title']}}</a></p>
-                </li>
-            </ul>
+    <div class="List">
+        <ul class="MovieTitle">
+            <li *ngFor="let movie of Movies$">
+                <p> Episode {{movie['episode_id']}} :
+                    <a class='poptilte' style="text-decoration:none" href="#{{movie['title']}}" >{{movie['title']}}</a>
+                </p>
+                <span id="{{movie['title']}}" class="overlay">
+                    <div id="popup">
+                        <h2>Movie</h2>
+                        <a class="close" href="#">&times;</a>
+                        <span class="content">
+                            <ul class="MovieTitle">
+                                <li> <span id ='contentlabel'>Title :</span>   {{movie['title']}} </li>
+                                <li> <span id ='contentlabel'>Release Date : </span>  {{movie['release_date']}} </li>
+                                <li> <span id ='contentlabel'>Opening Crawl :</span>  {{movie['opening_crawl']}} </li>
+                                <li> <span id ='contentlabel'>Characters :</span> </li>
+                            </ul>
+                        </span>
+                    </div>
+                </span>
+            </li>
+        </ul>
     </div>
-    <div id="popup1" class="overlay">
-            <div class="popup">
-                <h2>Movie</h2>
-                <a class="close" href="#">&times;</a>
-                <div class="content">
-                    Thank to pop me out of that button, but now i'm done so you can close this window.
-                </div>
-            </div>
-    </div>
-</div>
+</body>
+</html>
